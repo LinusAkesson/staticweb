@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.http.get('api/GetData').subscribe((data) => {
-      this.title = data.toString();
+      console.log(data);
     });
   }
 }
