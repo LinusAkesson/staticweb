@@ -15,11 +15,12 @@ export class AppComponent {
     this.http
       .get('api/GetTitle', {
         headers: {
-          'X-MS-CLIENT-PRINCIPAL-NAME': 'ernst',
+          'X-MS-CLIENT-PRINCIPAL-NAME': ' ',
         },
       })
       .subscribe((data: any) => {
-        this.title = data.text;
+        console.log(data);
+        this.title = data;
       });
   }
 }
