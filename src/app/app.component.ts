@@ -16,6 +16,8 @@ export class AppComponent {
       .get('api/GetTitle', {
         headers: {
           'Content-Type': 'x-ms-client-principle',
+          'swa-managed-key':
+            'iwGmr9+aalw49Wy7MIAfnZ0O47mpEBq6WeOAdr1uglyLxt9yBElPzA==',
         },
       })
       .subscribe((data: any) => {
