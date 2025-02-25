@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {
     this.http
-      .get('api/GetData', {
+      .get('api/GetTitle', {
         headers: {
           'Content-Type': 'x-ms-client-principle',
         },
