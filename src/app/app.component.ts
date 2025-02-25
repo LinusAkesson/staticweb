@@ -12,8 +12,14 @@ export class AppComponent {
   title = '';
 
   constructor(private http: HttpClient) {
-    this.http.get('api/GetData').subscribe((data: any) => {
-      this.title = data.text;
-    });
+    this.http
+      .get('api/GetData', {
+        headers: {
+          'Content-Type': 'x-ms-client-principle',
+        },
+      })
+      .subscribe((data: any) => {
+        this.title = data.text;
+      });
   }
 }
