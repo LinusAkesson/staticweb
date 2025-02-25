@@ -8,13 +8,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = '';
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.http.get('api/GetData').subscribe((data) => {
+  constructor(private http: HttpClient) {
+    this.http.get('api/GetData').subscribe((data: any) => {
       this.title = data.text;
     });
   }
