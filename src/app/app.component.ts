@@ -15,7 +15,7 @@ export class AppComponent {
     this.http
       .get('api/GetTitle', {
         headers: {
-          'X-MS-CLIENT-PRINCIPAL': 'ernst',
+          'X-MS-CLIENT-PRINCIPAL-NAME': 'ernst',
         },
       })
       .subscribe((data: any) => {
