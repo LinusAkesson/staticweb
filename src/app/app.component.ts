@@ -19,8 +19,7 @@ export class AppComponent {
         },
       })
       .subscribe((data: any) => {
-        console.log(data);
-        this.title = data;
+        this.title = data.title;
       });
   }
 }
